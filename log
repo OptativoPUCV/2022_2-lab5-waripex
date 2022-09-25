@@ -86,3 +86,9 @@ treemap.c:97:6: note: previous definition of ‘eraseTreeMap’ was here
       |      ^~~~~~~~~~~~
 Compilation failed
 37b04e7
+Sun 25 Sep 2022 10:13:14 PM UTC: 
+ treemap.c | 21 ---------------------
+ 1 file changed, 21 deletions(-)
+ tests:  13|5
+total_score: 25/70
+5d28b62
