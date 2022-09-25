@@ -32,3 +32,21 @@ treemap.c:95:6: note: previous definition of ‘eraseTreeMap’ was here
       |      ^~~~~~~~~~~~
 Compilation failed
 8f1d802
+Sun 25 Sep 2022 10:06:38 PM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c:110:6: error: redefinition of ‘removeNode’
+  110 | void removeNode(TreeMap * tree, TreeNode* node) {
+      |      ^~~~~~~~~~
+treemap.c:91:6: note: previous definition of ‘removeNode’ was here
+   91 | void removeNode(TreeMap * tree, TreeNode* node) {
+      |      ^~~~~~~~~~
+treemap.c:114:6: error: redefinition of ‘eraseTreeMap’
+  114 | void eraseTreeMap(TreeMap * tree, void* key){
+      |      ^~~~~~~~~~~~
+treemap.c:95:6: note: previous definition of ‘eraseTreeMap’ was here
+   95 | void eraseTreeMap(TreeMap * tree, void* key){
+      |      ^~~~~~~~~~~~
+Compilation failed
+7bae872
