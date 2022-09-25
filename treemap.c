@@ -175,8 +175,31 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 }
 
 
-Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+Pair * upperBound(TreeMap * tree, void* key){
+  tree->current = tree->root;
+  TreeNode* upBo_node = NULL;
+  while (1){
+    if (tree->lower_than(tree->current->pair->key , key) == 1){
+      if (tree->current->right == NULL) break;
+      tree->current = tree->current->right;
+      continue;
+    }
+
+    if (tree->lower_than(tree->current->pair->key , key) == 0){
+      if (tree->current->left == NULL) break;
+      tree->current = tree->current->left;
+      upBo_node = tree->current->parent;
+      continue;
+    }
+  }
+
+  if (tree->lower_than(tree->current->pair->key , key) == 1 && upBo_node != NULL){
+        return upBo_node->pair;
+    }
+
+  if (upBo_node == NULL) return NULL;
+  
+  return tree->current->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
