@@ -62,3 +62,27 @@ Sun 25 Sep 2022 10:09:37 PM UTC:
  tests:  11|6
 total_score: 15/70
 4b05f33
+Sun 25 Sep 2022 10:12:09 PM UTC: 
+ treemap.c | 52 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 52 insertions(+)
+In file included from test.c:4:
+treemap.c:106:12: error: redefinition of ‘minimum’
+  106 | TreeNode * minimum(TreeNode * x){
+      |            ^~~~~~~
+treemap.c:85:12: note: previous definition of ‘minimum’ was here
+   85 | TreeNode * minimum(TreeNode * x){
+      |            ^~~~~~~
+treemap.c:112:6: error: redefinition of ‘removeNode’
+  112 | void removeNode(TreeMap * tree, TreeNode* node) {
+      |      ^~~~~~~~~~
+treemap.c:93:6: note: previous definition of ‘removeNode’ was here
+   93 | void removeNode(TreeMap * tree, TreeNode* node) {
+      |      ^~~~~~~~~~
+treemap.c:116:6: error: redefinition of ‘eraseTreeMap’
+  116 | void eraseTreeMap(TreeMap * tree, void* key){
+      |      ^~~~~~~~~~~~
+treemap.c:97:6: note: previous definition of ‘eraseTreeMap’ was here
+   97 | void eraseTreeMap(TreeMap * tree, void* key){
+      |      ^~~~~~~~~~~~
+Compilation failed
+37b04e7
